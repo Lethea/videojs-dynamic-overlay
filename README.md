@@ -13,7 +13,7 @@ npm install --save videojs-dynamic-overlay
 ```
 
 ## Usage
-
+![alt text](http://prntscr.com/gwejew)
 To include videojs-newoverlay on your website or web application, use any of the following methods.
 
 ### `<script>` Tag
