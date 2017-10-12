@@ -1,6 +1,6 @@
 {
-  "name": "@Emre/videojs-newoverlay",
-  "version": "0.0.0",
+  "name": "videojs-dynamic-overlay",
+  "version": "1.0.0",
   "description": "Video Üzerine Text Vb Dinamik Yer Değiştirme",
   "main": "dist/videojs-newoverlay.cjs.js",
   "module": "dist/videojs-newoverlay.es.js",
@@ -100,5 +100,16 @@
     "uglify-js": "^3.0.7",
     "videojs-languages": "^1.0.0",
     "videojs-standard": "^6.0.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lethea/videojs-dynamic-overlay.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lethea/videojs-dynamic-overlay/issues"
+  },
+  "homepage": "https://github.com/Lethea/videojs-dynamic-overlay#readme"
 }

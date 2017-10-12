@@ -3,9 +3,8 @@ import {version as VERSION} from '../package.json';
 
 // Default options for the plugin.
 const defaults = {
-  pozisyon:'sol-ust',
-  icerik:'burda',
-  degisimSuresi:3000
+  contentOfOverlay:'burda',
+  changeDuration:3000
 };
 
 // Cross-compatibility for Video.js 5 and 6.
@@ -26,32 +25,26 @@ const registerPlugin = videojs.registerPlugin || videojs.plugin;
  * @param    {Object} [options={}]
  *           A plain object containing options for the plugin.
  */
-const randomArea=(element)=>{
+const randomArea=(element,changeDuration)=>{
   var heightOfVideo = window.document.getElementById("videojs-newoverlay-player_html5_api").clientHeight;
-  var widthOfVideo = window.document.getElementById("videojs-newoverlay-player_html5_api").clientWidth
+  var widthOfVideo = window.document.getElementById("videojs-newoverlay-player_html5_api").clientWidth;
   var number = Math.floor(Math.random() * widthOfVideo);
   element.style.left=number+"px";
   var number2 = Math.floor(Math.random() * heightOfVideo);
   element.style.top=number2+"px";
-  setTimeout(function(){randomArea(element)},5000);
+  setTimeout(function(){randomArea(element,changeDuration)},changeDuration);
 };
 const onPlayerReady = (player, options) => {
   player.addClass('vjs-newoverlay');
-  if(options.pozisyon=="sol-ust"){
     const el = dom.createEl('div', {
       className: `vjs-emre`
     });
-    el.innerHTML=options.icerik;
+    el.innerHTML=options.contentOfOverlay;
     player.el().appendChild(el);
     player.on("play",function(){
-      el.append("emre");
-      randomArea(el);
+      randomArea(el,options.changeDuration);
 
     });
-    player.on("timeupdate",function(){
-      //randomArea(el);
-    });
-  }
 };
 
 /**

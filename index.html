@@ -21,7 +21,10 @@
   <script>
     (function(window, videojs) {
       var player = window.player = videojs('videojs-newoverlay-player');
-      player.newoverlay();
+      player.newoverlay({
+        contentOfOverlay:"Emre",
+        changeDuration:1000
+      });
     }(window, window.videojs));
   </script>
 </body>
