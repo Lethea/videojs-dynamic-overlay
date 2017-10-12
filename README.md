@@ -27,7 +27,22 @@ This is the simplest case. Get the script in whatever way you prefer and include
   var player = videojs('my-video');
 
   player.newoverlay();
+  ################ OR ###############
+  player.newoverlay({
+          contentOfOverlay:"Sample Content",
+          changeDuration:1000
+        });
 </script>
+<style>
+.vjs-emre{
+    z-index:9999;
+    color:black;
+    background-color:brown;
+    font-size:20px;
+    position:absolute;
+    right:20px;
+  }
+</style>
 ```
 
 ### Browserify/CommonJS
