@@ -41,10 +41,7 @@ const onPlayerReady = (player, options) => {
     });
     el.innerHTML=options.contentOfOverlay;
     player.el().appendChild(el);
-    player.on("play",function(){
-      randomArea(el,options.changeDuration);
-
-    });
+  randomArea(el,options.changeDuration);
 };
 
 /**
