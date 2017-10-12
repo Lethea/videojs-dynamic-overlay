@@ -18,6 +18,7 @@
   <script src="node_modules/video.js/dist/video.js"></script>
   <script src="dist/videojs-newoverlay.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.11.0/videojs-contrib-hls.js"></script>
+  <script src="optional/videojs5-hlsjs-source-handler.js"></script>
   <script>
     (function(window, videojs) {
       var player = window.player = videojs('videojs-newoverlay-player');
@@ -25,6 +26,7 @@
         contentOfOverlay:"Emre",
         changeDuration:1000
       });
+	  player.qualityPickerPlugin();
     }(window, window.videojs));
   </script>
 </body>
