@@ -9,7 +9,7 @@ Video Üzerine Text Vb Dinamik Yer Değiştirme
 ## Installation
 
 ```sh
-npm install --save videojs-newoverlay
+npm install --save videojs-dynamic-overlay
 ```
 
 ## Usage
