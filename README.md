@@ -45,6 +45,13 @@ require('videojs-newoverlay');
 var player = videojs('my-video');
 
 player.newoverlay();
+
+################ OR ###############
+player.newoverlay({
+        contentOfOverlay:"Sample Content",
+        changeDuration:1000
+      });
+
 ```
 
 ### RequireJS/AMD
