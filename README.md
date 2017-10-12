@@ -1,5 +1,5 @@
 # videojs-newoverlay
-
+Dynamic Overlay on Video For Education System
 Video Üzerine Text Vb Dinamik Yer Değiştirme
 
 ## Table of Contents
@@ -13,7 +13,7 @@ npm install --save videojs-dynamic-overlay
 ```
 
 ## Usage
-![alt text](http://prntscr.com/gwejew)
+Sample Image : https://prnt.sc/gwejew
 To include videojs-newoverlay on your website or web application, use any of the following methods.
 
 ### `<script>` Tag
