@@ -45,41 +45,59 @@ This is the simplest case. Get the script in whatever way you prefer and include
 </style>
 ```
 
-### Browserify/CommonJS
+### No Need To Build
 
-When using with Browserify, install videojs-newoverlay via npm and `require` the plugin as you would any other module.
+Working example with built scripts .
 
-```js
-var videojs = require('video.js');
+Quaility Selector
+Dynamic Overlay that configurable
 
-// The actual plugin function is exported by this module, but it is also
-// attached to the `Player.prototype`; so, there is no need to assign it
-// to a variable.
-require('videojs-newoverlay');
+```html
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>videojs-newoverlay Demo</title>
+  <link href="video-js.css" rel="stylesheet">
 
-var player = videojs('my-video');
-
-player.newoverlay();
-
-################ OR ###############
-player.newoverlay({
-        contentOfOverlay:"Sample Content",
-        changeDuration:1000
+</head>
+<body>
+  <video id="videojs-newoverlay-player" class="video-js vjs-default-skin" controls height="480" width="848" poster="http://vjs.zencdn.net/v/oceans.png">
+    <source src="https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8" type="application/x-mpegurl">
+  </video>
+  <script src="es5-shim.js"></script>
+  <script src="video.js"></script>
+  <script src="videojs-newoverlay.js"></script>
+  <script src="videojs-contrib-hls.js"></script>
+  <script src="videojs5-hlsjs-source-handler.js"></script>
+  <script>
+    (function(window, videojs) {
+      var player = window.player = videojs('videojs-newoverlay-player');
+      player.newoverlay({
+        contentOfOverlay:"Emre Karataşoğlu ID NUMBER",
+        changeDuration:10000
       });
+	  player.qualityPickerPlugin();
+    }(window, window.videojs));
+  </script>
+</body>
+</html>
+<style>
+  .vjs-emre{
+    z-index:9999;
+    color:black;
+    background-color:brown;
+    font-size:20px;
+    position:absolute;
+    width: 170px; word-break: break-all; word-wrap: break-word;
+	right:20px;
 
+
+  }
+
+</style>
 ```
 
-### RequireJS/AMD
-
-When using with RequireJS (or another AMD library), get the script in whatever way you prefer and `require` the plugin as you normally would:
-
-```js
-require(['video.js', 'videojs-newoverlay'], function(videojs) {
-  var player = videojs('my-video');
-
-  player.newoverlay();
-});
-```
 
 ## License
 

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>videojs-newoverlay Demo</title>
+  <link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
+
+</head>
+<body>
+  <video id="videojs-newoverlay-player" class="video-js vjs-default-skin" controls height="480" width="848" poster="http://vjs.zencdn.net/v/oceans.png">
+    <source src="http://192.168.1.155:1935/smilvod/smil:test.smil/playlist.m3u8" type="application/x-mpegurl">
+  </video>
+  <ul>
+    <li><a href="test/">Run unit tests in browser.</a></li>
+    <li><a href="docs/api/">Read generated docs.</a></li>
+  </ul>
+  <script src="node_modules/es5-shim/es5-shim.js"></script>
+  <script src="node_modules/video.js/dist/video.js"></script>
+  <script src="dist/videojs-newoverlay.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.11.0/videojs-contrib-hls.js"></script>
+  <script src="optional/videojs5-hlsjs-source-handler.js"></script>
+  <script>
+    (function(window, videojs) {
+      var player = window.player = videojs('videojs-newoverlay-player');
+      player.newoverlay({
+        contentOfOverlay:"Emre Karataşoğlu ID NUMBER",
+        changeDuration:10000
+      });
+	  player.qualityPickerPlugin();
+    }(window, window.videojs));
+  </script>
+</body>
+</html>
+<style>
+  .vjs-emre{
+    z-index:9999;
+    color:black;
+    background-color:rgba(255,0,0,0.1);
+    font-size:20px;
+    position:absolute;
+    width: 170px; word-break: break-all; word-wrap: break-word;
+    right:20px;
+  }
+  video{
+    object-fit:fill;
+  }
+
+</style>
