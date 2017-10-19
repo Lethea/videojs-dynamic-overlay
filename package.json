@@ -1,6 +1,6 @@
 {
   "name": "videojs-dynamic-overlay",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Video Üzerine Text Vb Dinamik Yer Değiştirme",
   "main": "dist/videojs-newoverlay.cjs.js",
   "module": "dist/videojs-newoverlay.es.js",
@@ -102,6 +102,7 @@
     "videojs-standard": "^6.0.0"
   },
   "directories": {
+    "example": "examples",
     "test": "test"
   },
   "repository": {

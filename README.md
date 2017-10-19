@@ -52,6 +52,8 @@ Working example with built scripts .
 Quaility Selector
 Dynamic Overlay that configurable
 
+http://cdn.emrekaratasoglu.com/overlay_demo/
+
 ```html
 <!doctype html>
 <html>
