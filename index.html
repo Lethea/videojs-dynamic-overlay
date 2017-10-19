@@ -7,7 +7,7 @@
 
 </head>
 <body>
-  <video id="videojs-newoverlay-player" class="video-js vjs-default-skin" controls height="480" width="848">
+  <video id="videojs-newoverlay-player" class="video-js vjs-default-skin" controls height="480" width="848" poster="http://vjs.zencdn.net/v/oceans.png">
     <source src="https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8" type="application/x-mpegurl">
   </video>
   <ul>
@@ -23,8 +23,8 @@
     (function(window, videojs) {
       var player = window.player = videojs('videojs-newoverlay-player');
       player.newoverlay({
-        contentOfOverlay:"Emre",
-        changeDuration:1000
+        contentOfOverlay:"Emre Karataşoğlu 10600201516",
+        changeDuration:10000
       });
 	  player.qualityPickerPlugin();
     }(window, window.videojs));
@@ -38,7 +38,10 @@
     background-color:brown;
     font-size:20px;
     position:absolute;
-    right:20px;
+    width: 170px; word-break: break-all; word-wrap: break-word;
+	right:20px;
+	
+	
   }
 
 </style>

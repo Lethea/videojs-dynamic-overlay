@@ -29,8 +29,14 @@ const randomArea=(element,changeDuration)=>{
   var heightOfVideo = window.document.getElementById("videojs-newoverlay-player_html5_api").clientHeight;
   var widthOfVideo = window.document.getElementById("videojs-newoverlay-player_html5_api").clientWidth;
   var number = Math.floor(Math.random() * widthOfVideo);
+  if(number>200){
+    number = number-200;
+  }
   element.style.left=number+"px";
   var number2 = Math.floor(Math.random() * heightOfVideo);
+  if(number2>60){
+    number2=number2-60;
+  }
   element.style.top=number2+"px";
   setTimeout(function(){randomArea(element,changeDuration)},changeDuration);
 };
